@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Saved Training Programs</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Experience</th>
+            <th>Goals</th>
+            <th>Program</th>
+            <th>Date Created</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for program in programs %}
+        <tr>
+            <td>{{ program["name"] }}</td>
+            <td>{{ program["age"] }}</td>
+            <td>{{ program["experience"] }}</td>
+            <td>{{ program["goals"] }}</td>
+            <td>
+                <pre>{{ program["program"] }}</pre>
+            </td>
+            <td>{{ program["created_at"] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/">Back to Home</a>
+{% endblock %}

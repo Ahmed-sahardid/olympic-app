@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Olympic Weightlifting App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+<body>
+    <header>
+        <h1>Olympic Weightlifting Program</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/programs">View Saved Programs</a>
+  </nav>
+  
+</body>
+</html>
