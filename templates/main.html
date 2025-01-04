@@ -5,14 +5,18 @@
     <h1>Welcome to the Olympic App</h1>
     <div class="card-container">
         <div class="card">
+            <!-- Blog Card with Image -->
+            <img src="static/images/book.png" alt="Blog" class="card-image">
             <h2>Blog</h2>
-            <p>Explore and ask for advice from fellow athletes.</p>
-            <a href="{{ url_for('blog') }}" class="card-button">Go to Blog</a>
+            <p>Read the latest articles and advice on Olympic training.</p>
+            <a href="" class="card-button">Go to Blog</a>
         </div>
         <div class="card">
+            <!-- Weightlifting Card with Image -->
+            <img src="static/images/weight.png" alt="Weightlifting" class="card-image">
             <h2>Weightlifting</h2>
-            <p>Get tips and track your progress in Olympic weightlifting.</p>
-            <a href="{{ url_for('weightlifting') }}" class="card-button">Explore Weightlifting</a>
+            <p>Improve your weightlifting techniques with expert guidance.</p>
+            <a href="" class="card-button">Start Weightlifting</a>
         </div>
     </div>
 </div>
@@ -25,17 +29,21 @@
     .card-container {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 30px;
         margin-top: 30px;
+        flex-wrap: wrap;
+        align-items: center;
     }
     .card {
         background-color: #fff;
-        padding: 20px;
+        padding: 40px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 250px;
+        width: 300px;
+        height: 350px;
         text-align: center;
         transition: transform 0.3s, box-shadow 0.3s;
+        overflow: hidden;
     }
     .card:hover {
         transform: translateY(-10px);
@@ -43,7 +51,7 @@
     }
     .card h2 {
         font-size: 1.5em;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .card p {
         font-size: 1em;
@@ -61,6 +69,12 @@
     .card-button:hover {
         background-color: #0056b3;
     }
+    .card-image {
+        width: 100%;
+        height: 150px; /* Adjusted height to ensure image fits well */
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
 </style>
-
 {% endblock %}
