@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}Weightlifting{% endblock %}
+{% block content %}
+<h1>Olympic Weightlifting</h1>
+<ul>
+    <li><a href="{{ url_for('weightlifting') }}">Warm-ups</a></li>
+    <li><a href="{{ url_for('weightlifting') }}">Snatch</a></li>
+    <li><a href="{{ url_for('weightlifting') }}">Clean and Jerk</a></li>
+</ul>
+{% endblock %}

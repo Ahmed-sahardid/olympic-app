@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Olympic Weightlifting App</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Olympic App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
-
 <body>
     <header>
-        <h1>Olympic Weightlifting Program</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('main') }}">Home</a></li>
+                <li><a href="{{ url_for('weightlifting') }}">Weightlifting</a></li>
+                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                <li>
+                    <form method="post" action="{{ url_for('logout') }}">
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         {% block content %}{% endblock %}
     </main>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/programs">View Saved Programs</a>
-  </nav>
-  
 </body>
 </html>

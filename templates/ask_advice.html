@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %}Ask for Advice{% endblock %}
+{% block content %}
+<h1>Ask for Advice</h1>
+<form method="POST" action="{{ url_for('ask_for_advice') }}">
+    <textarea name="question" placeholder="Type your question here..."></textarea>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
