@@ -9,14 +9,14 @@
             <img src="static/images/book.png" alt="Blog" class="card-image">
             <h2>Blog</h2>
             <p>Read the latest articles and advice on Olympic training.</p>
-            <a href="" class="card-button">Go to Blog</a>
+            <a href="{{ url_for('ask_for_advice') }}" class="card-button">Go to Blog</a>
         </div>
         <div class="card">
             <!-- Weightlifting Card with Image -->
             <img src="static/images/weight.png" alt="Weightlifting" class="card-image">
             <h2>Weightlifting</h2>
             <p>Improve your weightlifting techniques with expert guidance.</p>
-            <a href="" class="card-button">Start Weightlifting</a>
+            <a href="{{ url_for('weightlifting') }}" class="card-button">Start Weightlifting</a>
         </div>
     </div>
 </div>
